@@ -1,0 +1,11 @@
+{
+  "name": "HTML5-reloaded",
+  "description": "Netacademia HTML5 reloaded",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/bal13/html5-reloaded",
+  "private": true,
+  "dependencies": {
+    "fontawesome": "^5.0.10"
+  }
+}
