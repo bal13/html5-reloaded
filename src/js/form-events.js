@@ -8,6 +8,7 @@ window.addEventListener('resize', function(ev) {
 });
 */
 
+/*
 var inputList = document.querySelectorAll('input[type=file]');
 console.log ('inputList', inputList);
 for(var i = 0; i < inputList.length; i++){
@@ -15,3 +16,4 @@ for(var i = 0; i < inputList.length; i++){
 		console.log(ev.target.value);
 	});
 }
+*/

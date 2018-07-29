@@ -32,11 +32,11 @@ for( var i = 0; i < fileInputs.length; i++){
 	
 	//Figyeljük az inputérték változását	
 	input.addEventListener('change', function(ev){
-//		var currentLabel = 
-//			document.querySelector('label[for='+ ev.target.id +']');
+		var currentLabel = 
+			document.querySelector('label[for='+ ev.target.id +']');
 		var name = ev.target.value;
 		name = name.replace(/\\/g, '/').split('/').pop();
-		label.innerHTML = name;
+		currentLabel.innerHTML = name;
 	});
 	
 	//Hozzáadjuk az elemeket a divhez
