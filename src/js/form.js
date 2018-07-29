@@ -16,8 +16,11 @@ var inputs = regForm.querySelectorAll('input');
 //Egyedi fájl input létrehozása
 var fileInputs = document.querySelectorAll('.file-input-group');
 for( var i = 0; i < fileInputs.length; i++){
+	//Beolvassuk a változó értékeket
 	var name = fileInputs[i].getAttribute('data-name');
 	var label = document.createElement('label');
+	
+	//létrehozzuk a címkét
 	label.setAttribute('for', name);
 	label.className = 'col-sm-6 col-xs-offset-2 control-label btn btn-primary file-input-label';
 	label.innerHTML = name;
@@ -27,6 +30,16 @@ for( var i = 0; i < fileInputs.length; i++){
 	input.type = 'file';
 	input.className = 'hidden-file-input';
 	
+	//Figyeljük az inputérték változását	
+	input.addEventListener('change', function(ev){
+//		var currentLabel = 
+//			document.querySelector('label[for='+ ev.target.id +']');
+		var name = ev.target.value;
+		name = name.replace(/\\/g, '/').split('/').pop();
+		label.innerHTML = name;
+	});
+	
+	//Hozzáadjuk az elemeket a divhez
 	fileInputs[i].appendChild(input);
 	fileInputs[i].appendChild(label);
 }
